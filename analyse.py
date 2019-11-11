@@ -20,14 +20,14 @@ def format_sentence(sentence):
 
 pos_data = []  # Training positive data
 positive = []  # Test positive data
-with open('training_pos.txt') as f:
+with open('data/training_pos.txt') as f:
     for line in f:
         positive.append(line)
         pos_data.append([format_sentence(line), 1])
 
 neg_data = []  # Training negative data
 negative = []  # Test negative data
-with open('training_neg.txt') as f:
+with open('data/training_neg.txt') as f:
     for line in f:
         negative.append(line)
         neg_data.append([format_sentence(line), 0])
